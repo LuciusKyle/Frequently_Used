@@ -29,7 +29,7 @@ void boost_chrono_ver(void)
 	start = boost::chrono::system_clock::now();
 	//do something.
 	std::cout << "time: "
-		<< boost::chrono::duration_cast<boost::chrono::milliseconds>(boost::chrono::system_clock::system_clock::now() - start).count()
+		<< boost::chrono::duration_cast<boost::chrono::milliseconds>(boost::chrono::system_clock::now() - start).count()
 		<< " milliseconds"
 		<< std::endl;
 }
@@ -42,7 +42,7 @@ void stl_ver(void)
 	start = std::chrono::system_clock::now();
 	//do something.
 	std::cout << "time: "
-		<< std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::system_clock::now() - start).count()
+		<< std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - start).count()
 		<< " milliseconds"
 		<< std::endl;
 }
