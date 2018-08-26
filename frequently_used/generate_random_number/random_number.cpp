@@ -55,12 +55,13 @@ void boost_random(void)
 
 void generate_password()
 {
-	const std::string chars(
-		"abcdefghijklmnopqrstuvwxyz"
-		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-		"1234567890"
-		"!@#$%^&*()"
-		"`~-_=+[{]}\\|;:'\",<.>/?");
+	const std::string chars(R"(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`~-_=+[{]}\|;:'",<.>/?)");
+	//const std::string chars(
+	//	"abcdefghijklmnopqrstuvwxyz"
+	//	"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	//	"1234567890"
+	//	"!@#$%^&*()"
+	//	"`~-_=+[{]}\\|;:'\",<.>/?");
 	boost::random::random_device rng;
 	boost::random::uniform_int_distribution<> index_dist(0, chars.size() - 1);
 	for (int i = 0; i < 8; ++i) {
