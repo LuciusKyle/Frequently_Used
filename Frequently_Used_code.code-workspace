@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "record_duration"
+		},
+		{
+			"path": "split_string"
 		}
 	],
 	"settings": {}
