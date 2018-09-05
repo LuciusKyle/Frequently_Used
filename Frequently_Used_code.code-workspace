@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "system_time"
+		},
+		{
+			"path": "get_digit_count_at_complie_time"
 		}
 	],
 	"settings": {
