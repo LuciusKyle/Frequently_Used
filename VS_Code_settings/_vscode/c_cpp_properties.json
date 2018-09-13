@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:/MinGW-w64/posix/open_source_libs/boost/1_68_0/include",
-                "C:/MinGW-w64/posix/open_source_libs/Intel_TBB/tbb-2018_U5/include"
+                "C:/MinGW-w64/posix/open_source_libs/Intel_TBB/tbb-2019/include"
             ],
             "defines": [], 
             "browse": {
