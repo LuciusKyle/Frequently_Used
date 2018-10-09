@@ -32,7 +32,7 @@
                 "${workspaceFolder}/**",
                 "~/Desktop/Data/CPP_libs/boost/boost_1_68_0_install/include",
                 "~/Desktop/Data/CPP_libs/FFmpeg/FFmpeg_4.0/include",
-                "~/Desktop/Data/CPP_libs/Intel_TBB/tbb-2018_U5/include",
+                "~/Desktop/Data/CPP_libs/Intel_TBB/tbb-2019/include",
                 "~/Desktop/Data/CPP_libs/LevelDB/1.21/include",
                 "~/Desktop/Data/CPP_libs/libevent/libevent-2.1.8-stable/include",
                 "~/Desktop/Data/CPP_libs/mysql/connector-c++-8.0/include",
