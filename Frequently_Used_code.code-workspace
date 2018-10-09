@@ -7,6 +7,9 @@
 			"path": "record_duration"
 		},
 		{
+			"path": "prime_number"
+		},
+		{
 			"path": "split_string"
 		},
 		{
