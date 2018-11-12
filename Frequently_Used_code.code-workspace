@@ -1,6 +1,9 @@
 {
 	"folders": [
 		{
+			"path": "directory_traversal"
+		},
+		{
 			"path": "generate_random_number"
 		},
 		{
