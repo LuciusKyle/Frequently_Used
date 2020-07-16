@@ -1,22 +1,20 @@
 
 #include <boost/random.hpp>
 #include <boost/random/random_device.hpp>
-#include <ctime>
 #include <random>
 
 void stl_random(void) {
-  // std::mt19937_64 random_engine(time(nullptr));
-  std::default_random_engine random_engine(time(nullptr));
+  std::random_device random_device;
+  std::default_random_engine random_engine(random_device());
 
   std::normal_distribution<double> Gaussian_distribution(0, 1);
-  Gaussian_distribution(random_engine);
+  double random_double_number = Gaussian_distribution(random_engine);
 
-  std::uniform_int_distribution<size_t> uniform_distribution(0, 1024);
-  uniform_distribution(random_engine);
+  std::uniform_int_distribution<int> uniform_distribution(-1024, 1024);
+  const int random_int_number = uniform_distribution(random_engine);
 
-  std::uniform_real_distribution<double> uniform_floating_point_distribution(
-      -100.0, 100.0);
-  uniform_floating_point_distribution(random_engine);
+  std::uniform_real_distribution<double> uniform_floating_point_distribution(-1.0, 1.0);
+  random_double_number = uniform_floating_point_distribution(random_engine);
 }
 
 void boost_random(void) {
@@ -25,8 +23,7 @@ void boost_random(void) {
   boost::random::normal_distribution<double> Gaussian_distribution(0, 1);
   Gaussian_distribution(random_engine);
 
-  boost::random::uniform_int_distribution<int> uniform_distribution(-1024,
-                                                                    1024);
+  boost::random::uniform_int_distribution<int> uniform_distribution(-1024, 1024);
   uniform_distribution(random_engine);
 
   boost::random::uniform_real_distribution<double>

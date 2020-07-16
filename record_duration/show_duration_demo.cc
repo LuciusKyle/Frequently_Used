@@ -4,28 +4,35 @@
 #include <chrono>
 #include <iostream>
 
-void boost_chrono_ver(void) {
-  auto start = boost::chrono::system_clock::now();
+using std::cout;
+using std::endl;
 
-  start = boost::chrono::system_clock::now();
+void boost_chrono_ver(void) {
+  using boost::chrono::duration_cast;
+  using boost::chrono::milliseconds;
+  using boost::chrono::system_clock;
+
+  auto start = system_clock::now();
+
+  start = system_clock::now();
   // do something.
-  std::cout << "time: "
-            << boost::chrono::duration_cast<boost::chrono::milliseconds>(
-                   boost::chrono::system_clock::now() - start)
-                   .count()
-            << " milliseconds" << std::endl;
+  cout << "time: "
+       << duration_cast<milliseconds>(system_clock::now() - start).count()
+       << " milliseconds" << endl;
 }
 
 void stl_ver(void) {
-  auto start = std::chrono::system_clock::now();
+  using std::chrono::duration_cast;
+  using std::chrono::milliseconds;
+  using std::chrono::system_clock;
 
-  start = std::chrono::system_clock::now();
+  auto start = system_clock::now();
+
+  start = system_clock::now();
   // do something.
-  std::cout << "time: "
-            << std::chrono::duration_cast<std::chrono::milliseconds>(
-                   std::chrono::system_clock::now() - start)
-                   .count()
-            << " milliseconds" << std::endl;
+  cout << "time: "
+       << duration_cast<milliseconds>(system_clock::now() - start).count()
+       << " milliseconds" << endl;
 }
 
 void boost_timer_ver() {
@@ -33,7 +40,7 @@ void boost_timer_ver() {
 
   timer.start();
   // do something.
-  std::cout << "time: " << timer.elapsed().wall << " nanoseconds" << std::endl;
+  cout << "time: " << timer.elapsed().wall << " nanoseconds" << endl;
 }
 
 int main(int argc, char *argv[]) {
